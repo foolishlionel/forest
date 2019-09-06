@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="TRE-ax-bt4" customClass="ReportWeekHeader" customModule="day21" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PI1-p3-144">
+                    <rect key="frame" x="0.0" y="0.0" width="453" height="15"/>
+                    <color key="backgroundColor" red="0.84672089025381503" green="1" blue="0.78032761737207768" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本周" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvG-pH-dMD">
+                    <rect key="frame" x="15" y="15" width="40" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="bge-Ld-kvs"/>
+                        <constraint firstAttribute="width" constant="40" id="ppY-6x-mgd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWP-Mp-ady">
+                    <rect key="frame" x="373" y="32" width="60" height="10"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufM-gp-YrP">
+                            <rect key="frame" x="0.0" y="0.0" width="42" height="10"/>
+                            <color key="backgroundColor" red="0.53148071880000003" green="1" blue="0.46865359760000003" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="42" id="WBw-nF-IwE"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.84672089029999997" green="1" blue="0.78032761740000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="ufM-gp-YrP" firstAttribute="leading" secondItem="LWP-Mp-ady" secondAttribute="leading" id="1CZ-UJ-yGh"/>
+                        <constraint firstAttribute="bottom" secondItem="ufM-gp-YrP" secondAttribute="bottom" id="eIg-Ap-lt2"/>
+                        <constraint firstAttribute="width" constant="60" id="hGi-RO-MnF"/>
+                        <constraint firstAttribute="height" constant="10" id="iTf-Ng-VcI"/>
+                        <constraint firstItem="ufM-gp-YrP" firstAttribute="top" secondItem="LWP-Mp-ady" secondAttribute="top" id="sqG-wU-gKz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="LWP-Mp-ady" firstAttribute="centerY" secondItem="bvG-pH-dMD" secondAttribute="centerY" id="2l2-Ek-X9u"/>
+                <constraint firstItem="bvG-pH-dMD" firstAttribute="top" secondItem="XqX-50-xZd" secondAttribute="top" constant="15" id="8Pk-hv-VYD"/>
+                <constraint firstItem="XqX-50-xZd" firstAttribute="trailing" secondItem="PI1-p3-144" secondAttribute="trailing" id="LX0-u4-FjN"/>
+                <constraint firstItem="bvG-pH-dMD" firstAttribute="top" secondItem="PI1-p3-144" secondAttribute="bottom" id="Ner-tM-lt9"/>
+                <constraint firstItem="PI1-p3-144" firstAttribute="top" secondItem="XqX-50-xZd" secondAttribute="top" id="OxD-dZ-l1M"/>
+                <constraint firstItem="XqX-50-xZd" firstAttribute="trailing" secondItem="LWP-Mp-ady" secondAttribute="trailing" constant="20" id="TDm-tj-9Bi"/>
+                <constraint firstItem="bvG-pH-dMD" firstAttribute="leading" secondItem="XqX-50-xZd" secondAttribute="leading" constant="15" id="YRK-B4-hOz"/>
+                <constraint firstItem="PI1-p3-144" firstAttribute="leading" secondItem="XqX-50-xZd" secondAttribute="leading" id="cSD-We-XgS"/>
+                <constraint firstItem="XqX-50-xZd" firstAttribute="bottom" secondItem="bvG-pH-dMD" secondAttribute="bottom" id="q8P-fB-0dM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="XqX-50-xZd"/>
+            <connections>
+                <outlet property="bottomView" destination="LWP-Mp-ady" id="UXI-oG-N3R"/>
+                <outlet property="topView" destination="ufM-gp-YrP" id="3Ar-f5-Bpy"/>
+                <outlet property="topViewWidth" destination="WBw-nF-IwE" id="R4k-8A-WTi"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="438.98050974512745"/>
+        </view>
+    </objects>
+</document>

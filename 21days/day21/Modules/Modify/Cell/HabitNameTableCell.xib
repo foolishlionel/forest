@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HabitNameTableCell" customModule="day21" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70.5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3f-iA-Jqh">
+                        <rect key="frame" x="15" y="5" width="290" height="60"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBu-Bg-nb3">
+                                <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ryt-UG-2n6"/>
+                                    <constraint firstAttribute="width" constant="40" id="vsq-UZ-Aqw"/>
+                                </constraints>
+                                <state key="normal" image="habit_icon_abc"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入习惯名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TK2-kE-DhR">
+                                <rect key="frame" x="52" y="5" width="223" height="50"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modify_circle" translatesAutoresizingMaskIntoConstraints="NO" id="WXy-8B-3vH">
+                                <rect key="frame" x="25" y="35" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="753-uu-8L7"/>
+                                    <constraint firstAttribute="width" constant="15" id="bhP-kK-3El"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="4pz-Z5-kmz"/>
+                            <constraint firstItem="TBu-Bg-nb3" firstAttribute="centerY" secondItem="j3f-iA-Jqh" secondAttribute="centerY" id="6Tp-8l-8Of"/>
+                            <constraint firstAttribute="trailing" secondItem="TK2-kE-DhR" secondAttribute="trailing" constant="15" id="DyQ-uX-N53"/>
+                            <constraint firstAttribute="bottom" secondItem="TK2-kE-DhR" secondAttribute="bottom" constant="5" id="UWg-J1-PcQ"/>
+                            <constraint firstItem="TK2-kE-DhR" firstAttribute="leading" secondItem="TBu-Bg-nb3" secondAttribute="trailing" constant="12" id="VnH-Xn-GHe"/>
+                            <constraint firstItem="TK2-kE-DhR" firstAttribute="top" secondItem="j3f-iA-Jqh" secondAttribute="top" constant="5" id="Yfa-XQ-53d"/>
+                            <constraint firstItem="WXy-8B-3vH" firstAttribute="trailing" secondItem="TBu-Bg-nb3" secondAttribute="trailing" id="cUs-KD-2fR"/>
+                            <constraint firstItem="TBu-Bg-nb3" firstAttribute="leading" secondItem="j3f-iA-Jqh" secondAttribute="leading" id="cbR-mB-gmv"/>
+                            <constraint firstItem="WXy-8B-3vH" firstAttribute="bottom" secondItem="TBu-Bg-nb3" secondAttribute="bottom" id="o3h-ej-JU9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="j3f-iA-Jqh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="18T-io-C0x"/>
+                    <constraint firstAttribute="trailing" secondItem="j3f-iA-Jqh" secondAttribute="trailing" constant="15" id="2SG-rh-Tnm"/>
+                    <constraint firstItem="j3f-iA-Jqh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="YN4-gd-cmH"/>
+                    <constraint firstAttribute="bottom" secondItem="j3f-iA-Jqh" secondAttribute="bottom" constant="5" id="szZ-I0-unb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgContent" destination="j3f-iA-Jqh" id="hmh-0D-CWT"/>
+                <outlet property="iconButton" destination="TBu-Bg-nb3" id="8WG-aD-0g9"/>
+                <outlet property="nameTextField" destination="TK2-kE-DhR" id="GA5-MP-8Jx"/>
+            </connections>
+            <point key="canvasLocation" x="56" y="67.916041979010501"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="habit_icon_abc" width="120" height="120"/>
+        <image name="modify_circle" width="30" height="30"/>
+    </resources>
+</document>

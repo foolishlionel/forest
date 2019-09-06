@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="250" id="KGk-i7-Jjw" customClass="AnalyzeCalendarTableCell" customModule="day21" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="285"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="284.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbU-Vv-Xeo">
+                        <rect key="frame" x="10" y="5" width="300" height="279.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6LS-Sd-LUf" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="230"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="qVh-tm-eGl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mF1-vK-E2a">
+                                <rect key="frame" x="0.0" y="239" width="300" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="m3l-SH-Tuf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FlD-XC-N1k">
+                                <rect key="frame" x="0.0" y="240" width="300" height="39.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="打卡时间设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Z-PV-M3f">
+                                        <rect key="frame" x="10" y="11.5" width="86" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="uVp-XV-grn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="全天可打卡" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqR-Nl-TUc">
+                                        <rect key="frame" x="218" y="11.5" width="72" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="1ih-60-uWv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiZ-sf-ik9">
+                                        <rect key="frame" x="218" y="0.0" width="82" height="39.5"/>
+                                        <connections>
+                                            <action selector="changeTimeButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="k0X-rc-B67"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wiZ-sf-ik9" secondAttribute="bottom" id="5tC-BR-Iru"/>
+                                    <constraint firstItem="Y6Z-PV-M3f" firstAttribute="centerY" secondItem="FlD-XC-N1k" secondAttribute="centerY" id="N7j-Kf-TS6"/>
+                                    <constraint firstItem="wiZ-sf-ik9" firstAttribute="leading" secondItem="pqR-Nl-TUc" secondAttribute="leading" id="PKL-ay-S2g"/>
+                                    <constraint firstAttribute="height" constant="39.5" id="UOM-zO-0Li"/>
+                                    <constraint firstItem="Y6Z-PV-M3f" firstAttribute="leading" secondItem="FlD-XC-N1k" secondAttribute="leading" constant="10" id="YWb-jF-bJG"/>
+                                    <constraint firstAttribute="trailing" secondItem="pqR-Nl-TUc" secondAttribute="trailing" constant="10" id="cc2-yq-Qpz"/>
+                                    <constraint firstItem="pqR-Nl-TUc" firstAttribute="centerY" secondItem="FlD-XC-N1k" secondAttribute="centerY" id="g8t-Tr-K9D"/>
+                                    <constraint firstItem="wiZ-sf-ik9" firstAttribute="top" secondItem="FlD-XC-N1k" secondAttribute="top" id="jIN-iA-qy7"/>
+                                    <constraint firstAttribute="trailing" secondItem="wiZ-sf-ik9" secondAttribute="trailing" id="ujd-Dd-F7m"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6LS-Sd-LUf" firstAttribute="leading" secondItem="BbU-Vv-Xeo" secondAttribute="leading" id="5ta-xi-e6F"/>
+                            <constraint firstItem="mF1-vK-E2a" firstAttribute="leading" secondItem="BbU-Vv-Xeo" secondAttribute="leading" id="FZc-KW-UcW"/>
+                            <constraint firstItem="FlD-XC-N1k" firstAttribute="leading" secondItem="BbU-Vv-Xeo" secondAttribute="leading" id="HJf-1H-j69"/>
+                            <constraint firstAttribute="bottom" secondItem="FlD-XC-N1k" secondAttribute="bottom" id="KKB-mw-k2f"/>
+                            <constraint firstAttribute="trailing" secondItem="6LS-Sd-LUf" secondAttribute="trailing" id="MYj-vX-o26"/>
+                            <constraint firstItem="FlD-XC-N1k" firstAttribute="top" secondItem="mF1-vK-E2a" secondAttribute="bottom" constant="0.5" id="Njb-Es-9Ii"/>
+                            <constraint firstAttribute="trailing" secondItem="FlD-XC-N1k" secondAttribute="trailing" id="cft-Tj-ZQ5"/>
+                            <constraint firstAttribute="trailing" secondItem="mF1-vK-E2a" secondAttribute="trailing" id="d7Z-Wy-JcA"/>
+                            <constraint firstItem="6LS-Sd-LUf" firstAttribute="top" secondItem="BbU-Vv-Xeo" secondAttribute="top" id="fl7-MK-5RZ"/>
+                            <constraint firstAttribute="height" constant="279.5" id="puE-jR-gcy"/>
+                            <constraint firstItem="mF1-vK-E2a" firstAttribute="top" secondItem="6LS-Sd-LUf" secondAttribute="bottom" constant="9" id="zfP-4R-pId"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="BbU-Vv-Xeo" secondAttribute="trailing" constant="10" id="GVK-1P-pCh"/>
+                    <constraint firstAttribute="bottom" secondItem="BbU-Vv-Xeo" secondAttribute="bottom" id="eKc-gn-uey"/>
+                    <constraint firstItem="BbU-Vv-Xeo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="i84-MK-GMm"/>
+                    <constraint firstItem="BbU-Vv-Xeo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="vo2-5o-ydg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgContent" destination="BbU-Vv-Xeo" id="9OB-OK-2MB"/>
+                <outlet property="calendar" destination="6LS-Sd-LUf" id="H1L-R1-Nvm"/>
+                <outlet property="checkRangeView" destination="FlD-XC-N1k" id="4dN-o4-NFk"/>
+                <outlet property="checkTimeRangeLabel" destination="pqR-Nl-TUc" id="C7o-mp-egh"/>
+                <outlet property="separateLine" destination="mF1-vK-E2a" id="sC9-T6-YJ4"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="247.37631184407797"/>
+        </tableViewCell>
+    </objects>
+</document>

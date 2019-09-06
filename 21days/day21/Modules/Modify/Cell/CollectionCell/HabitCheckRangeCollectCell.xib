@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HabitCheckRangeCollectCell" customModule="day21" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVD-vD-CW5">
+                        <rect key="frame" x="5" y="5" width="65" height="65"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modify_clock" translatesAutoresizingMaskIntoConstraints="NO" id="2NY-9c-mRS">
+                                <rect key="frame" x="20" y="8" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="xHa-zH-ecP"/>
+                                    <constraint firstAttribute="width" constant="25" id="yZg-d0-EhJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="任意时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sER-7k-ezJ">
+                                <rect key="frame" x="0.0" y="38" width="65" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sER-7k-ezJ" secondAttribute="trailing" id="8HT-Mi-keu"/>
+                            <constraint firstItem="2NY-9c-mRS" firstAttribute="top" secondItem="HVD-vD-CW5" secondAttribute="top" constant="8" id="Iyn-Zh-b25"/>
+                            <constraint firstItem="sER-7k-ezJ" firstAttribute="top" secondItem="2NY-9c-mRS" secondAttribute="bottom" constant="5" id="OQY-lZ-h5m"/>
+                            <constraint firstItem="sER-7k-ezJ" firstAttribute="leading" secondItem="HVD-vD-CW5" secondAttribute="leading" id="bAd-ZK-JWh"/>
+                            <constraint firstItem="2NY-9c-mRS" firstAttribute="centerX" secondItem="HVD-vD-CW5" secondAttribute="centerX" id="iBd-83-8gG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HVD-vD-CW5" secondAttribute="bottom" constant="5" id="0YC-Ul-tWf"/>
+                <constraint firstAttribute="trailing" secondItem="HVD-vD-CW5" secondAttribute="trailing" constant="5" id="8pS-dG-rMQ"/>
+                <constraint firstItem="HVD-vD-CW5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="HIf-KJ-zOJ"/>
+                <constraint firstItem="HVD-vD-CW5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Qni-2g-7k3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="bgContentView" destination="HVD-vD-CW5" id="2CW-uq-3JF"/>
+                <outlet property="timeIcon" destination="2NY-9c-mRS" id="HSp-Og-FS9"/>
+                <outlet property="timeLabel" destination="sER-7k-ezJ" id="3wd-Zo-mwB"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="modify_clock" width="31" height="30"/>
+    </resources>
+</document>

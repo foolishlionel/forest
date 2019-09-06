@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MakeColorCollectCell" customModule="day21" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stU-0X-CCM">
+                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rf3-gQ-Snl">
+                                <rect key="frame" x="5" y="5" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="CJa-P2-StO"/>
+                                    <constraint firstAttribute="height" constant="30" id="lpj-gE-PBl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rf3-gQ-Snl" firstAttribute="centerX" secondItem="stU-0X-CCM" secondAttribute="centerX" id="6dU-DY-xMY"/>
+                            <constraint firstItem="Rf3-gQ-Snl" firstAttribute="centerY" secondItem="stU-0X-CCM" secondAttribute="centerY" id="7Kz-SS-MZs"/>
+                            <constraint firstAttribute="height" constant="40" id="Yxv-Gq-eoS"/>
+                            <constraint firstAttribute="width" constant="40" id="xJb-kC-ECQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="stU-0X-CCM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="BwZ-6f-Oax"/>
+                <constraint firstItem="stU-0X-CCM" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="UiE-eX-Rvk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="bgView" destination="stU-0X-CCM" id="hPI-2v-g7d"/>
+                <outlet property="colorView" destination="Rf3-gQ-Snl" id="bEm-L7-3rL"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
